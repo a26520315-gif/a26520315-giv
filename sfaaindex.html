@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCEAN LUXURY - تسجيل الدخول</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b0f19;
+            color: #fff;
+        }
+        /* صفحة تسجيل الدخول الأولى */
+        .auth-container {
+            background: linear-gradient(rgba(11,15,25,0.7), rgba(11,15,25,0.9)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .auth-box {
+            background: rgba(30, 41, 59, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 420px;
+            border: 1px solid #334155;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        .auth-box h1 {
+            color: #38bdf8;
+            font-size: 26px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .auth-box p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .auth-box input {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 1px solid #475569;
+            background: #0f172a;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        .auth-box button {
+            width: 100%;
+            padding: 14px;
+            background-color: #0284c7;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+        .auth-box button:hover {
+            background-color: #0369a1;
+        }
+        .enter-site {
+            display: inline-block;
+            margin-top: 15px;
+            color: #38bdf8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .enter-site:hover {
+            text-decoration: underline;
+        }
+
+        /* تنسيق باقي الموقع */
+        header {
+            background-color: rgba(11, 15, 25, 0.95);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1e293b;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #38bdf8;
+        }
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #38bdf8;
+        }
+        .hero {
+            background: linear-gradient(rgba(11,15,25,0.6), rgba(11,15,25,0.8)), url('https://images.unsplash.com/photo-1569263979104-865ab9cd8d5c?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #f8fafc;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #94a3b8;
+        }
+        .section {
+            padding: 100px 20px 80px;
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+        .section h2 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        .grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: #1e293b;
+            border-radius: 10px;
+            width: 320px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border: 1px solid #334155;
+            text-align: right;
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .card p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .form-section {
+            background-color: #0f172a;
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+        }
+        .custom-form {
+            background: #1e293b;
+            max-width: 420px;
+            margin: 30px auto 0;
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        .custom-form input, .custom-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border: 1px solid #475569;
+            background: #0f172a;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        .custom-form textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .custom-form button {
+            width: 100%;
+            padding: 14px;
+            background-color: #0284c7;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .custom-form button:hover {
+            background-color: #0369a1;
+        }
+        footer {
+            background-color: #020617;
+            color: #64748b;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+            border-top: 1px solid #1e293b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. واجهة تسجيل الدخول كبداية للموقع -->
+    <div class="auth-container">
+        <div class="auth-box">
+            <h1>OCEAN LUXURY</h1>
+            <p>سجل دخولك للوصول إلى منصة بيع السفن واليخوت</p>
+            <form onsubmit="event.preventDefault(); document.getElementById('main-content').style.display='block'; window.scrollTo({top: window.innerHeight, behavior: 'smooth'});">
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <input type="password" placeholder="كلمة المرور" required>
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+            <a href="#main-content" class="enter-site" onclick="document.getElementById('main-content').style.display='block';">تخطي والدخول للموقع مباشرة ←</a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي للموقع -->
+    <div id="main-content">
+        <!-- الهيدر -->
+        <header>
+            <div class="logo">OCEAN LUXURY</div>
+            <nav>
+                <a href="#">الرئيسية</a>
+                <a href="#about">من نحن</a>
+                <a href="#features">مميزاتنا</a>
+                <a href="#products">اليخوت والسفن</a>
+                <a href="#contact">تواصل معنا</a>
+            </nav>
+        </header>
+
+        <!-- الواجهة الرئيسية -->
+        <section class="hero">
+            <h1>عالم الفخامة في أعالي البحار</h1>
+            <p>نقدم لك أرقى السفن واليخوت العالمية بتصميمات هندسية فريدة ومواصفات عالمية.</p>
+        </section>
+
+        <!-- من نحن -->
+        <section id="about" class="section">
+            <h2>من نحن</h2>
+            <p style="color: #94a3b8; max-width: 800px; margin: auto; font-size: 18px; line-height: 1.8;">
+                نحن وكالة عالمية رائدة في توريد وبيع اليخوت الفاخرة والسفن التجارية والسياحية. نجمع بين أحدث التقنيات البحرية وأعلى معايير الرفاهية والأمان لنلبي تطلعات نخبة العملاء حول العالم.
+            </p>
+        </section>
+
+        <!-- مميزاتنا -->
+        <section id="features" class="section">
+            <h2>مميزاتنا</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="تصاميم يخت فاخر">
+                    <div class="card-content">
+                        <h3>تصاميم عالمية</h3>
+                        <p>نخبة من أحدث تصميمات اليخوت المصنوعة بأعلى جودة فنية وهندسية.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1569263979104-865ab9cd8d5c?auto=format&fit=crop&w=600&q=80" alt="سفن كبرى في البحر">
+                    <div class="card-content">
+                        <h3>أمان ومعايير دولية</h3>
+                        <p>جميع سفننا مزودة بأحدث أنظمة الملاحة والسلامة البحرية المعتمدة.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1512753360435-3c3e9570a84d?auto=format&fit=crop&w=600&q=80" alt="خدمات بحرية VIP">
+                    <div class="card-content">
+                        <h3>خدمة عملاء VIP</h3>
+                        <p>استشارات هندسية ودعم فني متكامل ومخصص لعملائنا طوال الوقت.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- المنتجات / السفن -->
+        <section id="products" class="section">
+            <h2>أسطولنا الفاخر</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&q=80" alt="يخوت سبرينت">
+                    <div class="card-content">
+                        <h3>يخوت سبرينت الفاخرة</h3>
+                        <p>يخوت سريعة وعصرية مصممة للرحلات الخاصة والاستجمام بأعلى مستويات الراحة.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=600&q=80" alt="سفن الرحلات الكبرى">
+                    <div class="card-content">
+                        <h3>سفن الرحلات العابرة</h3>
+                        <p>سفن ضخمة مجهزة للرحلات الطويلة والبحار المفتوحة مع أجنحة فاخرة.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="قوارب رياضية سريعة">
+                    <div class="card-content">
+                        <h3>القوارب الرياضية</h3>
+                        <p>خيارات مثالية لمحبي السرعة والرياضات المائية وسط البحار والمحيطات.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- تواصل معنا -->
+        <section id="contact" class="form-section">
+            <h2>تواصل معنا</h2>
+            <p style="color: #94a3b8; margin-top: 10px;">يسعدنا الرد على استفساراتكم وطلبات الحجز والاستشارة</p>
+            <div class="custom-form">
+                <form>
+                    <input type="text" placeholder="الاسم الكامل" required>
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <textarea placeholder="اكتب رسالتك هنا..." required></textarea>
+                    <button type="submit">إرسال الرسالة</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- الفوتر -->
+        <footer>
+            <p>جميع الحقوق محفوظة لشركتنا العالمية للسفن واليخوت © 2026</p>
+        </footer>
+    </div>
+
+</body>
+</html>
